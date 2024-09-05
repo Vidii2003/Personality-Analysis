@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>
+            Quiz 11
+        </title>
+        <style>
+            body{
+                background-color: rgb(246, 175, 237);
+                text-align: center;
+                font-family: 'Lucida Calligraphy';
+                font-size: 35px;
+                font-weight: bold;
+                color:rgb(0, 0, 0);
+            }
+            button{
+                border:10px solid rgb(142, 6, 152);
+                border-radius:30px; 
+                background-color:rgb(26, 255, 0);
+                color:maroon; 
+                font-family:'Lucida Calligraphy';
+                font-weight:bold;
+                font-size:35px;
+                padding:25px;
+                margin:15px;
+            }
+            div{
+                display:inline-block;
+                float:center;
+                background-color:pink;
+                width:380px;
+                height:880px;
+                border: 20px solid rgb(212, 237, 233);
+                padding: 50px;
+                margin: 20px
+            }
+            .option-input {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                position: relative;
+                top: 13.33333px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 40px;
+                width: 40px;
+                transition: all 0.15s ease-out 0s;
+                background: #cbd1d8;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                display: inline-block;
+                margin-right: 0.5rem;
+                outline: none;
+                position: relative;
+                z-index: 1000;
+            }
+            .option-input:hover {
+                background: #572bd9;
+            }
+            .option-input:checked {
+                background: #ba06ba;
+            }
+            .option-input:checked::before {
+                width: 40px;
+                height: 40px;
+                display:flex;
+                font-size: 25px;
+                font-weight:bold;
+                position: absolute;
+                align-items:center;
+                justify-content:center;
+                font-family:'Font Awesome 5 Free';
+            }
+            .option-input:checked::after {
+                -webkit-animation: click-wave 0.65s;
+                -moz-animation: click-wave 0.65s;
+                animation: click-wave 0.65s;
+                background: #610176;
+                content: '';
+                display: block;
+                position: relative;
+                z-index: 100;
+            }
+            .option-input.radio {
+                border-radius:80%;
+            }
+            .option-input.radio::after {
+                border-radius:80%;
+            }
+            @keyframes click-wave {
+                0%{
+                    height: 40px;
+                    width: 40px;
+                    opacity: 0.35;
+                    position: relative;
+                }
+                100%{
+                    height: 200px;
+                    width: 200px;
+                    margin-left: -80px;
+                    margin-top: -80px;
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form action="page13.php" method="post">
+                <h1>11/16</h1>
+                <p>I help others even when I get nothing in return.</p><br><br><br><br>
+                <input type="radio" class="option-input radio" name="11" value="Yes">Yes
+                <input type="radio" class="option-input radio" name="11" value="No">No<br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
